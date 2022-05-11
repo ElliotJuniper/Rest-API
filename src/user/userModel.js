@@ -10,10 +10,14 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         unique: true,
-        match: /.+\@.\..+/,
+        match: /.+\@.+\..+/,
     }, 
     pass: {
         type: String,
         required: true,
     },
 });
+
+const User = mongoose.model("User", userSchema);
+
+module.exports = User;
