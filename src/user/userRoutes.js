@@ -6,10 +6,10 @@ const { addUser, listUsers, deleteUser, updateUser } = require("./userController
 
 const userRouter = Router();
 
-userRouter.post("/user", hashPass, addUser);
-userRouter.get("/user", hashPass, listUsers);
-userRouter.delete("/user", hashPass, deleteUser);
-userRouter.put("/user", hashPass, updateUser);
+userRouter.post("/users", hashPass, addUser);
+userRouter.get("/users", hashPass, listUsers);
+userRouter.delete("/users", hashPass, deleteUser);
+userRouter.put("/users", hashPass, updateUser);
 
 module.exports = userRouter;
 
